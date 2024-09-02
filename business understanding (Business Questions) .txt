@@ -1,0 +1,94 @@
+Question 1 : What is the likelihood of a fire becoming a secondary fire and are there any commonalities due to which it is more likely to experience secondary fires compared to primary fires?
+
+columns which will be used:
+IncidentGroup
+StopCodeDescription
+PropertyCategory
+PropertyType
+Postcode_district
+TimeOfDay
+DayOfWeek
+
+
+Descriptive model which will be used:   Association analysis
+Predictive model which will be used:     decision tree regression
+
+
+
+information:
+
+We can start by filtering the data to include only the incidents where the IncidentGroup is "Fire". 
+Then, we can further filter the data to include only the incidents where the StopCodeDescription is "Primary Fire" or "Secondary Fire".
+Once we have this filtered dataset, we can use various modeling techniques to explore the data and identify patterns.
+
+
+
+Question 2:
+
+What patterns can be observed in the occurrence of false alarms in the London Fire Brigade in relation to the time of day, and how can this information be used to improve false alarm reduction strategies?
+
+columns which will be used:
+IncidentGroup
+PropertyCategory
+PropertyType
+Postcode_district
+TimeOfDay
+DayOfWeek
+
+
+descriptive : Clustering
+predictive :  Descision tree 
+
+
+
+Information:
+Clustering could potentially be used to group similar types of false alarms together based on their time of occurrence and property type, but this would depend on the specific objectives of the analysis and the data available.
+
+
+
+
+
+
+Question 3:
+
+How does incident location contribute to delays in the arrival time of the first pump responding to incidents by the London Fire Brigade?
+
+Columns to be used:
+
+FirstPumpArriving_AttendanceTime
+IncidentLocation_easting_m
+IncidentLocation_northing_m
+Postcode_district
+IncidentStationGround
+Models to be applied:
+
+Descriptive: Decision Trees, Linear Regression
+Predictive: Random Forest, Gradient Boosting
+
+
+
+
+Question 4:
+
+Can we identify any wards in London where the response time of the second pump station has a significant impact on the cost of incidents that require multiple pump stations?
+
+Columns:
+IncGeo_WardName: to identify the ward where the incident occurred.
+NumStationsWithPumpsAttending: to determine the number of pump stations attending the incident.
+Notional Cost (£): to quantify the cost associated with the incident.
+FirstPumpArriving_DeployedFromStation: to identify the station from where the first pump was deployed.
+FirstPumpArriving_AttendanceTime: to calculate the response time for the first pump station.
+NumPumpsAttending: to determine the total number of pumps that attended the incident.
+PumpCount: to determine the total number of hours that the pumps were deployed for the incident.
+NumStationsWithTwoPumpAttending: to determine if more than one pump station attended the incident
+
+
+
+Descriptive model: We can use regression analysis to describe the relationship between the response time of the second pump station and the cost of incidents that require multiple pump stations. This model will allow us to determine which variables (such as ward, number of pumps, and response time) are most strongly associated with cost. By analyzing the coefficients of the model, we can gain insights into how changes in these variables impact the cost of incidents.
+
+Predictive model: We can use a decision tree algorithm as a predictive model to determine the likelihood of incidents requiring multiple pump stations based on the location, time, and other factors. This model will enable us to predict the occurrence of such incidents in a particular ward based on historical data. By analyzing the decision tree, we can identify the most important factors that contribute to the occurrence of these incidents and develop targeted strategies to prevent them from occurring.
+
+
+
+
+
